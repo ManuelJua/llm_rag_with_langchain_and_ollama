@@ -1,0 +1,8 @@
+langchain-community
+langchain
+langchain-chroma
+langchain-core
+langchain-openai
+langchain-text-splitters
+fastembed
+pymupdf
