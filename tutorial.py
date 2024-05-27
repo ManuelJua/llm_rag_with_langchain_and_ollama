@@ -6,10 +6,13 @@ llm=Ollama(base_url="http://localhost:11434",model="phi3")
 from langchain_community.document_loaders import PyMuPDFLoader
 import os
 data_pdf=[]
-for document in os.listdir(os.path.abspath("./papers_resistencia_interfaz")):
+for document in os.listdir(os.path.abspath(".")):
     if document[-4:]==".pdf":
-        loader = PyMuPDFLoader(os.path.abspath(f"./papers_resistencia_interfaz/{document}"))
+        loader = PyMuPDFLoader(os.path.abspath(f"./{document}"))
         data_pdf.extend(loader.load())
+
+
+        # data_pdf.extend(loader.load())
 
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter

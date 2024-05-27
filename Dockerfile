@@ -6,8 +6,8 @@ RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN pip install -r requirements.txt
 
-COPY  papers_resistencia_interfaz /home/langchain_tutorial/papers_resistencia_interfaz
-COPY tutorial.py /home/langchain_tutorial
+COPY tutorial.py Data_Engineer_CV_Manuel_Juarez.pdf /home/langchain_tutorial
+
 
 CMD ["tail","-f","/dev/null"]
 
